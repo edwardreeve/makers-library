@@ -1,5 +1,6 @@
 # A list of all books owned by the library
 class Catalogue
+  attr_reader :list
   def initialize
     @list = []
   end
@@ -8,7 +9,8 @@ class Catalogue
     @list << book
   end
 
-  def view
-    @list
+  def view(id)
+    selection = @list.select { |book| book.id == id }
+    selection[0].details
   end
 end
