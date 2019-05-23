@@ -1,6 +1,5 @@
 # A list of all books owned by the library
 class Catalogue
-
   def initialize
     @list = []
   end
@@ -10,6 +9,6 @@ class Catalogue
   end
 
   def view
-    @list.dup
+    @list
   end
 end
