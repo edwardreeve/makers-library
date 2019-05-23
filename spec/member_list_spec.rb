@@ -19,6 +19,11 @@ describe MemberList do
       list.add('12345', 'Bananaman')
       expect(list.members.length).to be(1)
     end
+    
+    it 'should return a member\'s details' do
+      list.add('12345', 'Bananaman')
+      expect(list.view_member('12345'))
+      
   end
 
   describe '#remove' do
